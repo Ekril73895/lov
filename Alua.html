@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+<meta charset = "UTF-8">
+
+    
+</head>
+<body>
+     <div type= "button" id = "start" style=" position:absolute; width:400px; height:400px; top:300px; left: 600px; background-color:; text-align:center; z-index:101; display:block;"></div>
+    <div type= "button" id = "start2" style=" position:absolute; width:500px; height:500px; top:300px; left: 300px; background-color:; text-align:center; z-index:101; display:none;"></div>
+<div id = "bocksqwer"  style ="position:absolute;
+                          width:10px;
+                          height:10px;
+                          background-color:;
+                          top:100px;
+                          left:600px;
+                          display:none; 
+                          z-index:100;
+                          "><img src="qwer.png" style = "width:1000px; height:800px;"></div>
+    
+    <div id = "bocks"  style ="position:absolute;
+                          width:10px;
+                          height:10px;
+                          background-color:;
+                          top:100px;
+                          left:600px;
+                          display:block; 
+                          z-index:100;
+                          "><img src="box1.png" style = "width:300px; height:300px;"></div>
+    <div id = "bocks2" style ="position:absolute;
+                          width:10px;
+                          height:10px;
+                          background-color:;
+                          top:100px;
+                          left:900px;
+                          display:block;
+                          z-index:100;
+                          "><img src="box2.png" style = "width:300px; height:300px;"></div>
+    <div id = "bocks3" style ="position:absolute;
+                          width:10px;
+                          height:10px;
+                          background-color:;
+                          top:400px;
+                          left:600px;
+                          display:block; 
+                          z-index:100;
+                          "><img src="box3.png" style = "width:300px; height:300px;"></div>
+    <div id = "bocks4" style ="position:absolute;
+                          width:10px;
+                          height:10px;
+                          background-color:;
+                          top:400px;
+                          left:900px;
+                           display:block; 
+                          z-index:100;
+                          "><img src="box4.png" style = "width:300px; height:300px;"></div>
+ 
+<img id="stih" src = "stih.png" style="position:absolute; display:none;">
+    <style>
+     
+    </style>
+    <script>
+             function mah(){
+       
+          var q = 1;
+          var w = 3;
+          var e = 10;    
+          var t = 20;
+          var timer = setInterval(function(){
+              q--;
+              w--;
+              e--; 
+              t--;
+              if (q==0){
+                 document.getElementById("bocks").style.display = "none";
+                  
+              }
+              if (w==0){
+                  document.getElementById("bocks2").style.display = "none";
+                  
+              }
+               if (e==0){
+                 document.getElementById("bocks3").style.display = "none";
+               }
+               if (t==0){
+                document.getElementById("bocks4").style.display = "none";  
+                document.getElementById("start").style.display = "none"; 
+                document.getElementById("start2").style.display = "block"; 
+                document.getElementById("bocksqwer").style.display = "block";
+                
+              }
+          }, 500)}
+            
+          function mah2(){
+       
+          var q = 1;
+          var timer = setInterval(function(){
+              q--;
+              
+              if (q==0){
+                 document.getElementById("bocksqwer").style.display = "none";
+                 
+                 document.getElementById("stih").style.display = "block"; 
+              }
+                
+              },500)}
+         
+
+         
+         
+        
+        
+
+        document.getElementById("start").addEventListener("click", mah)
+         document.getElementById("start2").addEventListener("click", mah2)
+    </script>   
+</body>
